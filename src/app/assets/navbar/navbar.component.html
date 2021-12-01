@@ -1,1 +1,16 @@
 <p>navbar works!</p>
+<nav>
+    <div class="nav-wrapper deep-orange darken-2">
+      <a href="#" class="brand-logo"> <img class="responsive-img" src="http://purl.org/dc/dcmitype/StillImage">></a>
+      <ul id="nav-mobile" class="right hide-on-med-and-down">
+        <li><a routerLink="/admin/get">Usuarios</a></li>
+        <li><a routerLink="/encomiendas/get">Encomiendas</a></li>
+        <li><a routerLink="/clientes/get">Clientes</a></li>
+        <li><a routerLink="/servicios/get">Servicios</a></li>
+        
+         <!-- Sesion -->
+      <li *ngIf="!activeSession"><a routerLink="/seguridad/login">Login</a></li>
+      <li *ngIf="activeSession"><a routerLink="/seguridad/cerrar-sesion">Cerrar Sesion</a></li>
+      </ul>
+    </div>
+  </nav>
